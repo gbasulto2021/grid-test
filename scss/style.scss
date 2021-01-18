@@ -1,0 +1,186 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+@import "../css/comp/var.scss";
+
+body{
+	min-height: 100vh;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 13px;
+	background:$cn2;
+}
+
+
+
+
+#container{
+	width: 95%;
+	margin: 40px auto;
+	display: grid;
+	
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: auto;
+	grid-gap: 20px;
+	grid-template-areas: 'clifford clifford clifford clifford'
+	                     'walter walter walter walter'
+	                     'harmon harmon harmon harmon'
+	                     'abrams abrams abrams abrams'
+	                     'whittle whittle whittle whittle'
+	                     'footer footer footer footer';
+	                     
+
+    .card{
+    	margin:0 auto;
+    	padding: 20px;
+    	display: flex;
+    	flex-direction: column;
+    	flex-wrap: wrap;
+    	width: 100%;
+    	border-radius: 20px;
+    	box-shadow: 0 2px 6px #ccc;
+    	.perfil{
+    		display: flex;
+    		padding: 10px;
+    		padding-left: 0;
+    		img{
+    			margin-left: 0;
+    			border: 1px solid $cp4;
+    			border-radius: 50%;
+    		}
+    		.name{
+    			width: 180px;
+    			padding: 5px;
+    			padding-left: 15px;
+
+
+    			h4{
+    				color:$cp4;
+    				font-size: 14px;
+    			}
+
+    			h5{
+    				color:$cn1;
+    			}
+    		}
+    	}
+
+
+    	.title{
+    		width: 100%;
+    		margin-bottom: 10px;
+    		h2{
+    			color:$cp4;
+    			text-align:justify;
+    		}
+    	}
+
+    	.comments{
+    		width: 100%;
+    		h3{
+    			color:$cn1;
+    			text-align:justify;
+    			font-weight: 500;
+    		}
+    	}
+    }
+
+	.card-clifford{
+		grid-area:clifford;
+		background:$cp1 url(images/bg-pattern-quotation.svg) no-repeat right 15px top;
+		/*background-color: $cp1;
+		background-image: url(images/bg-pattern-quotation.svg);
+		background-repeat: no-repeat;
+		background-position: right 15px top;*/
+		background-size: 150px 150px;
+		
+
+	} 
+	.card-walter{
+		grid-area:walter;
+		background: $cp2;
+	} 
+	.card-harmon, .card-whittle{
+		grid-area:harmon;
+		background:$cp4;
+		.perfil{
+			
+			img{
+     			border: 1px solid $cn2;
+    	 	}
+    	 	.name{
+
+    	 	   h4{
+    	 		color:$cp2;
+    	 		font-size: 14px;
+    	 	   }
+    	 	}
+
+    	}
+
+    	.title{
+    		     
+    		h2{
+    			color:$cp2;
+    		}
+    	}
+
+    	.comments{
+    		
+    		h3{
+    			color:$cp2;
+    			
+    		}
+    	}	
+    	 
+		
+	} 
+	.card-abrams{
+		grid-area:abrams;
+		background:$cp3;
+	} 
+	.card-whittle{
+		grid-area:whittle;
+	} 
+
+	.footer{
+            grid-area:footer;
+	        font-size: 11px; text-align: center;
+
+	       	a { color: hsl(228, 45%, 44%);
+
+	       	}
+
+     }
+
+}
+
+@media screen and (min-width: 1440px){
+
+	#container{
+		grid-template-areas: 'clifford clifford walter whittle'
+	                         'harmon  abrams abrams whittle'
+	                         'footer footer footer footer';
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     
